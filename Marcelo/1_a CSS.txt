@@ -1,0 +1,166 @@
+CSS - LINGUAGEM DE ESTILO UTILIZADA PARA DEFINIR A APRESENTAÇÃO DE DOCUMENTOS EM UMA LINGUAGEM DE MARCAÇÃO (html ou xml) Provê a separação entre a formatação e o conteúdo de um documento.
+
+
+
+---------- ATRIBUTOS -----------------------
+
+COR DO CORPO: background-color:cor
+IMAGEM DE FUNDO:
+body{
+	
+	 background-image: url("../IMAGENS/FUNDO.png"); /*COLOQUE O CAMINHO*/
+}
+
+IMAGEM DE FUNDO FIXA: 
+	background-attachment: fixed;
+	 background-image: url("../IMAGENS/FUNDO.png");
+COR DO TEXTO: color:nome ou código hexa da cor
+ALINHAMENTO: text-align:center
+TIPO DE FONTE: font-family:verdana
+ESTILO NA TAG: font-weight:bold (negrito)
+TAMANHO DA FONTE: font-size:18px
+TAMANHO DA RÉGUA: width:100%; height:1px
+TAMANHO DA IMG: width:100px; height:100px; float:left
+LINK: font-family: verdana; font-size: 80%; color: green;
+text-decoration:none; (ou underline)
+SOMBRA NO TEXTO: text-shadow:2px 2px 20px #000000}
+ /*2px de deslocamento 2px desl vertical 20px de espalhamento e a cor da sombra */
+BORDAS ARREDONDADAS: border-radius: 100px ;
+SOMBRA NA DIV
+box-shadow: 0px 0px 10px #000000 
+	/*SOMBRA NA DIV deslocamento lateral - desl vertical - espalhamento da sombra e cor*/
+
+barra de rolagem: coloca na div o overflow: scroll;
+
+para retirar a bolinha dos links com li
+li{display:inline; /*para retirar a bolinha da lista dentro do link*/
+}
+	
+
+FORMATANDO ELEMENTO FIGURE
+figure{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+CLASSE: Formatações especiais (veremos mais adiante)
+
+---------------------------------------------------------------------------
+
+COMO UTILIZÁ-LOS:
+
+<html>
+<head>
+<title> Formatando com CSS </title>
+
+<style>
+
+body{
+background-color:#6CA6CD 
+}
+body {
+background-image: url("fundo.jpg")
+}
+h1{
+text-align:center;
+font-family:verdana; 
+color:#00688B
+}	
+h2{
+text-align:center;
+font-family:verdana;
+color:white
+}
+p{
+text-align:justify;
+font-size=120%;
+color:black
+}
+hr{
+width:100%;
+height:1px;
+text-align:center;
+color:white
+}
+marquee{
+font-size:100%;
+font-family:verdana
+}
+img{
+width:100px;
+height=100px;
+float:left
+}
+a:link{
+font-family: verdana; 
+font-size: 80%;
+color: green; 
+text-decoration:none;
+}
+a:hover{
+font-family: verdana;
+font-size: 80%; 
+color: yellow
+}
+a:visited{
+font-family: verdana;
+font-size: 80%;
+color: blue; 
+text-decoration:underline;
+}
+table{
+border: 1px solid red; width: 50%;
+}
+td{
+border: 1px solid red; text-align:center
+}
+
+</head>
+
+
+//***CLASSES 
+ .minhaClasseImg{width:150; height:150}    (veremos mais adiante)
+ .minhaClasseTexto{font-family:verdana...}
+
+</style>
+</head>
+
+DEPOIS COMEÇA O CORPO DA PÁGINA
+
+
+Como aplicar a CLASSE criada acima:
+
+<img src="natureza.jpg" class="minhaClasseImg">
+<span class="minhaClasseTexto"> Pós graduação SENAC </span>
+
+
+ATENÇÃO: como aplicar formatação a UM ELEMENTO com ID  -> <footer id="rodape">
+
+
+EXEMPLO:
+
+
+<style>
+
+
+#rodape {
+	font-family:verdana
+	}
+
+
+</style>
+
+
+<footer id="rodape">
+ todos os direitos reservados
+</footer>
+
+OBS:
+PADDING =  PREENCHIMENTO POR DENTRO (ESPAÇO)
+MARGIN = MARGEM POR FORA
+
+
+no inicio do CSS EXTERNO
+@charset "UTF-8";

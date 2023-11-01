@@ -1,0 +1,197 @@
+<!Doctype html>
+<!-- mostra a versão utilizada do html -->
+<html lang= "pt-br">
+    <!-- idioma que será utilizado-->
+    <head>
+        <!-- parte inteligente da página onde irá as configurações de dispositivos, formatação e conteúdo -->
+         <meta charset="UTF-8"> <!-- para aceitar caracteres especiasis -->
+        <meta http-equiv="X-UA-compatible" content="IE-edge>" <!-- Essa opção permite que os desenvolvedores especifiqu em qual versão do Internet explorer deve ser usada para exibira página -->
+        <meta name="viewport" content="width=device-width, intial-scale=1.0"> <!-- Configurações para dispositivos móveis -->
+        <meta name="description" content=" aqui voce coloca uma descrição sobre a pagina..."/>
+        <meta name="keywords" content="palavra chave para o site de pesquisa te encontrar"/>
+<!--Chamando meu favicon-->
+
+<link rel="icon" href ="favicon.ico">
+        
+<title>PET SHOP</title>
+
+
+    <style>
+
+img{
+            width:200px; /* Largura da imagem */
+            height: 200px; /* Altura da imagem*/
+        }
+        
+h1{
+    color: rgb(49, 1, 160);   /*cor da fonte*/
+    font-family:'Times New Roman', Times, serif;  /*Tipo da fonte*/
+    text-align: center; /*alinhando o h1*/
+}
+body{
+    background-color: beige; /* cor fundo do corpo site*/
+}
+
+li{
+    display: inline; /* Para ocultar os itens*/
+}
+
+ul {
+    text-align: center; /*alinhamento dos links pq estão dentro do UL*/
+}
+
+a:link{
+        color: orange;
+        font-family: 
+    }
+ 
+a:hover{ /*quando passar o mouse*/
+    color:brown;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+}
+
+a:visited{ /* Link já clicado */
+    color:aquamarine;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:14px;
+}
+
+.banner{ /*classe para alterar o tamanho do meu banner elas começam com ponto*/
+    width: 100%; /* 100% da tela*/
+    height: auto; /*auto pq é o mesmo tamanho que criei no photoshop*/
+}
+
+.Logo{ 
+    width:50px;
+    height: 50px;
+    display: block; /*transformei em bloco para movimentar no body*/
+    margin: auto;/* para centralizar*/
+}
+    
+table {
+    background-color: ;
+    Width: 40%;
+}   
+    
+td{
+    text-align: justify;
+    padding: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+
+
+Th{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+    
+legend{
+    font: size 15px;
+    font-family: cursive;
+}
+
+Form{
+    width:50%; /*largura menor para centralizar*/
+    margin:auto /*para centralizar*/
+}
+
+
+label{
+color: rgb(130, 21, 35);
+}
+
+.Nome{
+color: blue;
+
+}
+    </style>
+
+    </head>
+
+    <body>
+        
+<img src="logo.png" class="Logo">
+
+
+        <ul> <!-- Para acessibilidade é necessario que os links estejam dentro de uma lista -->
+
+    <li><a href="index.html"> HOME |</a> 
+    <li><a href="quemsomos.html"> QUEM SOMOS |</a> 
+    <li><a href="Produtos.html">PRODUTOS |</a> 
+    <li><a href="faleconosco.html">FALE CONOSCO |</a>
+        
+        </ul>
+
+<form method="post" id="fcontato" action="mailto:m.lopessilva1996@gmail.com">
+<!--método post para guardar informações, id (indentificação) para chamar no css e formatar action para qual email irão os dados, Temos o método GET para pesquisas. (ele não guarda conteúdo)-->
+
+<fieldset id="usuario">  <!-- conjunto de campos em bloco-->
+
+<legend> Identificação do usuario</legend>     <!--teremos uma legenda acima do bloco para identificá-lo-->
+
+<p>  
+
+<label for="cNome">Nome</label> <!--Rótulo que virá antes da caixa de preenchimento-->
+<input type="text" name="tNome" id="cNome" size="40" maxlength="20" placeholder="digite seu nome aqui" autofocus required/> 
+<!--input é a caixa para o usuário preencher - do tipo texto a caixa possui um nome que ira receber conteúdo digitado e um id para o css- maxlength é a quantidade de caracteres que o usuário pode digitar dentro da caixa placeholder - texto informativo dentro da caixa - autofocus o cursor ficará dentro da caixa e o campo required será obrigatório-->
+</p>
+
+<p>
+
+<label for="cE-mail"> E-mail </label>
+<input type="email" name="tE-mail" id="cE-mail" size="40" maxlength="30" placeholder="digite aqui seu e-mail" autofocus required/>
+</p>
+
+<p>
+    
+    <label for="cTelefone"> Telefone </label>
+    <input type="text" name="tTelefone" id="cTelefone" size="40" maxlength="11" placeholder="digite aqui seu telefone com o código de àrea" autofocus required/>
+    </p>
+
+
+</p>
+
+
+<p> 
+
+    <label for="data"> Data de Nascimento:</label>
+    <input type="date" name="tNasc" id="cNasc"/>
+    <!-- Type date mostra o calendário-->
+</p>
+
+
+<!-- OBS: Se não aparecer o calendáriono navegador... é porque o navegador não é compativel com o TYPE="DATE"... Mesmo assim colocar-->
+
+</fieldset> <!-- fechei meu primeiro bloco de identificação ao usuario-->
+
+
+<!-- Abri um novo bloco para mensagem do cliente-->
+
+<fieldset id="mensagem">
+    <legend> Mensagem do Usuário</legend>  
+
+<p>
+
+    <label for="cMsg">Mensagem</label>
+    <textarea name="tMsg" cols="45" rows="5" placeholer="Deixe aqui sua mensagem"></textarea> <!-- textarea é uma caixa que vc pode deixar com mais linhas e colunas para o usuario digitar mais texto-->
+
+</p>
+
+</fieldset>
+
+<!--fechei o bloco de mensagem-->
+
+
+<!-- botões de enviar e apagar-->
+
+<input type="submit" name=" Enviar" />
+<input type="reset" name="Limpar"/>
+
+</form> <!-- fechar o formulario-->
+
+
+    </body>
+    </html>
