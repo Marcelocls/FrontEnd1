@@ -1,0 +1,154 @@
+@charset "UTF-8";  /* para que não haja erros*/
+
+div#CONTEINER{ /* caixa principal que contém todas as outras caixas*/
+    width: 100%; /* Meu conteiner será um pouco menor para eu ve-lo centralizado*/
+    background-color: rgb(255, 255, 255);
+    margin:auto; /*centralizar*/
+}
+#LOGO{
+    width: 9%;
+    height: 50px;
+    background-color: #352d27; /*fundo da mesma cor do nav para não percebemos que são duas divs*/
+    display: block;
+    float: left;
+    padding-left: 1%;
+
+}
+
+div#TOPO{
+    background-color: #352d27;
+    width: 100%; /*responsivo = se adapta a qualquer tela*/
+    height: 50px;
+}
+
+.tamanhologo{ 
+    width: 50px;
+    height: 50px;
+}
+
+/*MENU*/
+
+nav {
+    max-width: 100%; /*NAV onde estão os links- tera 100% da tela*/
+    height: 48px;
+    background-color: #352d27;
+}
+
+nav ul{ /* formatando o ul para alinhar os botões que estão dentro dele*/
+    list-style: none; /*retirando linha abaixo*/
+    margin: 0; /*coloquem margem se for necessário- espaço por fora*/
+    padding: 0; /*coloque padding se for necessário - espaço por dentro*/
+    text-align: center; /*alinhando os botões*/
+}
+
+nav ul li{
+    display: inline-block; /* transformei meu li em blocos para posicionar e alterar margens*/
+    
+}
+
+nav ul li a{ /* agora vamos formatar o link em si*/
+        padding: 15px;
+        text-decoration: none;
+        color: orange;
+        display: block;
+        text-align: center;
+        background-color: #352d27;
+    }
+ 
+    nav ul li a:hover{ /*quando passar o mouse sobre*/
+    background-color: black;/*ficará dessa cor*/
+    transition: all .5s; /*tempo de transição do efeito*/
+    border-radius: 10px;/*borda arredondada*/
+    }
+
+    a:visited{ /* Link já clicado */
+        color:rgb(255, 255, 255);
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size:14px;
+    }
+
+
+
+div#ESQUERDA{
+    background-color: rgb(255, 255, 255);
+    width: 50%; /*responsivo = se adapta a qualquer tela*/
+    height:auto;
+    display: block; /*transformei em bloco para posicionar para onde eu quiser*/
+    float: left; /* essa caixa ficará na esquerda*/
+    padding-left: 100px;
+    
+}
+
+
+
+
+div#DIREITA{
+    background-color: rgb(255, 255, 255);
+    width: 40%; /*responsivo = se adapta a qualquer tela*/
+    height: auto;
+    display: block; /*transformei em bloco para posicionar para onde eu quiser*/
+    float: right; /* essa caixa ficará na direita*/
+    font-family:century gothic, geneva, tahoma, sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    color: #352d27;
+    padding: 25px;
+}
+
+h1{
+
+
+    font-size: 25px;
+    color:#352d27;
+    text-align: center;
+    font-family:century gothic, 'Times New Roman', sans-serif;
+    padding: 20px;
+
+
+}
+
+#RODAPE{
+    clear: both;
+    background-color: #352d27;
+    width: 100%; /*responsivo = se adapta a qualquer tela*/
+    height: 40px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    font-family: century gothic,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 10px; /* espaço entre texto e a caixa na parte de cima*/
+    padding-bottom: 10px; /* espaço entre texto e a caixa na parte de cima*/
+    text-align: center; /*centralizar o texto na caixa*/ 
+}
+
+/* CSS da pagina MENU*/
+
+div#CONTEUDO{
+    width: 100%;
+    background-color: rgb(253, 254, 255);
+    text-align: center;
+}
+
+th{
+    font-size: 18px;
+}
+
+td{
+    text-align: justify;
+    padding: 10px;
+    font-family:Century Gothic, Geneva,Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+table{
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+/* CSS da pagina SOBRE NÓS*/
+
+DIV#SOBRE{
+    width: 100%; /* Meu conteiner será um pouco menor para eu ve-lo centralizado*/
+    background-color: rgb(255, 255, 255);
+    margin:auto; /*centralizar*/
+}

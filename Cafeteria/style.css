@@ -1,0 +1,61 @@
+@charset "UTF-8";  /* para que não haja erros*/
+
+div#CONTEINER{ /* caixa principal que contém todas as outras caixas*/
+    width: 90%; /* Meu conteiner será um pouco menor para eu ve-lo centralizado*/
+    height: auto;
+    background-color: blue;
+    margin:auto /*centralizar*/
+}
+div#Logo{
+    width: 10%;
+    height: 70px;
+    background-color: ;
+}
+
+
+div#TOPO{
+    background-color: brown;
+    width: 100%; /*responsivo = se adapta a qualquer tela*/
+    height: 50px;
+}
+
+div#ESQUERDA{
+    background-color: rgb(193,239,8);
+    width: 50%; /*responsivo = se adapta a qualquer tela*/
+    height: 400px;
+    display: block; /*transformei em bloco para posicionar para onde eu quiser*/
+    float: left; /* essa caixa ficará na esquerda*/
+}
+
+div#DIREITA{
+    background-color: rgb(8,189,239);
+    width: 50%; /*responsivo = se adapta a qualquer tela*/
+    height: 400px;
+    display: block; /*transformei em bloco para posicionar para onde eu quiser*/
+    float: right; /* essa caixa ficará na direita*/
+    font-family:century gothic, geneva, tahoma, sans-serif;
+    font-size: 12px;
+    text-align: justify;
+    color:brown;
+}
+
+h1{
+
+    font-size: 20px;
+    color:brown;
+    text-align: center;
+    font-family:century gothic, 'Times New Roman', sans-serif;
+
+}
+
+div#RODAPÉ{
+    background-color: brown;
+    width: 100%; /*responsivo = se adapta a qualquer tela*/
+    height: 50px;
+    font-size: 12px;
+    color: antiquewhite;
+    font-family: century gothic geneva,  tahoma, sans-serif;
+    padding: 5px; /* espaço entre texto e a caixa*/
+    text-align: center; /*centralizar o texto na caixa*/ 
+
+}
