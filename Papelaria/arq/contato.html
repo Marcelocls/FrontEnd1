@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Aqui você coloca uma descrição sobre a página..."/>
+    <meta name="keywords" content="palavra chave par o site de pesquisa te encontrar"/>
+
+   
+<title>  FLEXBOX APRENDENDO  </title>
+
+<style> /*CSS INTERNO SÓ PRA APRENDER. DEPOIS FAREMOS EXTERNO*/
+
+.wrapper { /*CONTAINER PRINCIPAL QUE RECEBERÁ AS CAIXAS INTERNAS*/
+  margin:auto; /*centralizar*/
+  display: flex; /*para transformar em blocos*/
+  flex-direction:row; /*Os blocos ficarão em linhas (um do lado do outro). Temos tambem em coluna -> column */
+  flex-wrap: wrap;  /*qdo utilizamos blocos eles ficam um do lado do outro mesmo q tenha tamanho total da tela, entao para resolver isso utilizamos o flex-wrap:wrap */
+  justify-content:center;/*alinhando os blocos na horizontal dentro do principal*/
+  align-items:center; /*alinhando os blocos na vertical */
+  width: 100%; /*Largura do principal*/
+  height:auto; 
+  background-color: rgb(255, 255, 255);
+  padding: 0px; /*espaço entre as caixas e o principal*/
+}
+
+.boxLogo{
+  background-color:rgb(255, 255, 255);
+  width: 100%;
+  height: 150px; /*para crescer com o tamanho do conteudo*/
+  padding:0%;
+  text-align: center;
+
+}
+
+.tamanhoLogo{ /*criei uma classe para o tamanho da logo*/
+    width:150px;
+    height: 150px;
+}
+
+.boxMenu{
+  background-color:#103a4b;
+  width: 100%;
+  height: 60px; /*para crescer com o tamanho do conteudo*/
+  padding:0%;
+  text-align: center;  
+  color:white;
+}
+
+
+.tamanhoBanner{ /*classe para tamanho do banner*/
+	width: 100%;
+}
+
+
+
+.boxFormulario { 
+  background-color:#ffffff;
+  width: 40%;
+  height: auto; /*para crescer com o tamanho do conteudo*/
+  margin: 0.8%; /*margem ao redor das caixas para ficarem distantes */
+  padding:0%;
+  
+
+  
+
+}
+
+.boxPessoa { 
+  background-color:#ffffff;
+  width: 40%;
+  height: auto; /*para crescer com o tamanho do conteudo*/
+  margin: 5%; /*margem ao redor das caixas para ficarem distantes */
+  padding:0%;
+  font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:20px;
+  text-align: center;
+
+  
+
+}
+
+
+	
+
+.boxMenuRodape{ /*caixa para o menu do rodape que será chamado 3 vezes para os menus e redes sociais*/
+  background-color:#103a4b;
+  width: 25%;
+  height: 100px; 
+  margin: 0%; /*margem ao redor das caixas para ficarem distantes OU zera pra grudarem */
+  padding-bottom:2%;
+  color:white;
+  font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:20px;
+ 
+
+}
+
+.boxRodape{
+  background-color:#1f5c74;
+  width: 100%;
+  height:40px; 
+  font-size:20px;
+  text-align:center;
+  color:white;
+  font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding:1%;
+
+  
+}
+
+/*MENU*/
+
+nav{
+	max-width: 100%; 
+	height: 60px; /*coloque a altura que quiser*/
+	background-color: #103a4b;
+ 	padding-top:5px;
+}
+
+nav ul{ /*formatando o ul para alinhar os botoes que estão dentro dele*/
+	list-style: none; /*retirando a linha abaixo do link*/
+	margin:0px; /*coloque margem se for necessário - espaço por fora*/
+	padding:0px; /*coloque padding se for necessário - espaço por dentro*/
+	text-align:center; /*alinhando os botoes */
+}
+
+nav ul li{
+	display: inline-block;	/*tranformei meu li em blocos para posicionar e alterar margens*/
+  font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-right:0px; /*distancia entre os botoes*/
+   
+}
+
+nav ul li a{ /*agora vms formatar o link em si*/
+	padding: 15px;
+	text-decoration: none;
+	color: #d1d8aa;
+	display: block;
+	text-align: center;
+	background-color:#103a4b; /*cor do botao inicial*/
+ 	border-radius: 15px; /*borda arredondada*/
+  padding-right: 40px;
+  padding-left: 40px;
+    
+}
+
+nav ul li a:hover { /*quando passar o mouse sobre*/
+	background-color: #ecd37a; /*ficará dessa cor quando passar o mouse*/
+	transition: all .5s; /*tempo de transição do efeito*/
+  border-radius: 15px; /*borda arredondada*/
+	font-family: Arial Narrow Bold, sans-serif;
+	color:#103a4b;
+	
+    
+}
+
+/*fim do menu*/
+
+/*links do rodape*/
+
+li {
+	display: block;
+	
+}
+
+li a {
+	text-decoration:none;
+	color:white;
+
+}
+
+h1{
+  font-size: 30px;
+}
+
+
+
+
+
+
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="boxLogo"  title="logo" alt="imagem marca" >
+            <img src="IMAGENS/LOGO.png" class="tamanhoLogo">
+        </div>
+
+        <div class="boxMenu">
+            <nav>
+                <ul>
+                    <li> <a href="index.html"> HOME </a></li>
+                    <li> <a href="escolar.html"> ESCOLAR </a></li>
+                    <li> <a href="informatica.html"> INFORMÁTICA </a></li>
+                    <li> <a href="contato.html"> FALE CONOSCO </a></li>
+                </ul>
+            </nav>
+        </div>
+
+  
+        <div class="boxPessoa">
+          <h1>FALE CONOSCO</h1>
+          (11) 91226-8614 <br />
+          Capitais e outras regiões  <br />
+          Horário de atendimento:  <br />
+          Seg. à Sex. das 8h às 18h  <br />
+          Sáb. das 9h às 14h <br />
+        </div>
+
+
+              
+        <div class="boxFormulario">
+
+          <form method="post" id="fContato" action="mailto:empresaX@gmail.com">
+            <!-- método post para guardar as informações
+                id (IDENTIFICAÇÃO) para chamar no css e formatar
+                action para qual email irão os dados
+                temos o method GET para pesquisas. Ele não guarda o conteúdo
+             -->
+                        
+            
+            <!-- teremos uma legenda acima do bloco para identificá-lo -->
+            <p> <!--parágrafo pra ficar separado em outra linha-->
+                <label for="cNome"> Nome: </label> <!--rótulo que virá antes da caixa de preenchimento-->
+                <input type="text" name="tNome" id="cNome" size="20" maxlength="20"     autofocus required />
+                <!--input é a caixa para o usuário preencher - do tipo texto 
+                 a caixa possui um nome que irá receber o conteudo digitado e um id para o css
+                 maxlength é a quantidade de caracteres que o usuário pode digitar dentro da caixa
+                 placeholder - texto informativo dentro da caixa
+                 autofocus - o cursor ficará dentro da caixa e o campo será obrigatório-->
+             </p> 
+             
+            
+                     
+             <p>
+                <label for="cMail">E-mail:</label>
+                <input type="email" name="tMail" id="cMail" size="20" maxlength="30"  required />
+             </p>
+             <!-- type email permite que vc digite um email válido-->
+            
+               
+     <p>
+        <label for="cRua">Endereço:</label>
+        <input type="text" name="tRua" id="cRua" size="30" maxlength="50"  placeholder="Rua, Av, Trav,..." required />
+    
+        
+    
+     
+     
+    </p>
+
+    
+    <!--abri um novo bloco para mensagem do cliente-->
+   
+     <legend>Mensagem do Usuário</legend>
+     
+       
+      <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem">
+        </textarea>  <!--textarea é uma caixa que vc pode deixar com mais linhas e colunas para o usuário digitar mais texto-->
+    </p>
+    
+  
+
+
+    <!-- botoes de enviar e apagar -->
+    <input type="submit" name="Enviar"  /> 
+    <input type="reset" name="Limpar"  />
+    
+    </form> <!-- fecha o formulario-->
+  
+    </div>
+
+       
+        <div class="boxMenuRodape">
+        	<ul>
+                    <li> <a href="index.html"> HOME </a></li>
+                    <li> <a href="escolar.html"> PRODUTOS </a></li>
+                    <li> <a href="informatica.html"> ENTREGA </a></li>
+                    
+                </ul>   
+	
+         </div>
+
+         <div class="boxMenuRodape">
+            <ul>
+                    <li> <a href="index.html"> CONTATO </a></li>
+                    <li> <a href="escolar.html"> QUEM SOMOS </a></li>
+                    <li> <a href="informatica.html"> TRABALHE CONOSCO</a></li>
+                    
+                </ul>  
+         </div>
+
+         <div class="boxMenuRodape">
+           <!--criei uma caixa vazia para o siga-nos ficar na ponta--> 
+         </div>
+
+         <div class="boxMenuRodape">
+            <h1> SIGA-NOS! </h1>
+         </div>
+
+
+
+
+      <div class="boxRodape">
+        Todos os direitos reservados - 2023
+      </div>
+
+    </div>
+  
+
+
+</body>
+</html>
+
+
+
+
+	
+	

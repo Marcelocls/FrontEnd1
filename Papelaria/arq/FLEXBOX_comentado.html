@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Aqui você coloca uma descrição sobre a página..."/>
+    <meta name="keywords" content="palavra chave par o site de pesquisa te encontrar"/>
+
+   
+<title>  FLEXBOX APRENDENDO  </title>
+
+<style> /*CSS INTERNO SÓ PRA APRENDER. DEPOIS FAREMOS EXTERNO*/
+
+.wrapper { /*CONTAINER PRINCIPAL QUE RECEBERÁ AS CAIXAS INTERNAS*/
+  margin:auto; /*centralizar*/
+  display: flex; /*para transformar em blocos*/
+  flex-direction:row; /*Os blocos ficarão em linhas (um do lado do outro). Temos tambem em coluna -> column */
+  flex-wrap: wrap;  /*qdo utilizamos blocos eles ficam um do lado do outro mesmo q tenha tamanho total da tela, entao para resolver isso utilizamos o flex-wrap:wrap */
+  justify-content:center;/*alinhando os blocos na horizontal dentro do principal*/
+  align-items:center; /*alinhando os blocos na vertical */
+  width: 95%; /*Largura do principal*/
+  height:auto; 
+  background-color: rgb(138, 89, 89);
+  padding: 0px; /*espaço entre as caixas e o principal*/
+}
+
+.boxLogo{
+  background-color:rgb(71, 9, 215);
+  width: 100%;
+  height: 150px; /*para crescer com o tamanho do conteudo*/
+  padding:0%;
+  text-align: center;
+
+}
+
+.tamanhoLogo{ /*criei uma classe para o tamanho da logo*/
+    width:150px;
+    height: 150px;
+}
+
+.boxMenu{
+  background-color:#1981aa;
+  width: 100%;
+  height: 60px; /*para crescer com o tamanho do conteudo*/
+  padding:0%;
+  text-align: center;  
+  color:white;
+}
+
+.boxBanner{
+  background-color:rgb(195, 225, 19);
+  width: 100%;
+  height: 300PX; /*para crescer com o tamanho do conteudo*/
+  padding:0%;
+  text-align: center;
+  color:white;
+}
+
+.tamanhoBanner{ /*classe para tamanho do banner*/
+	width: 100%;
+}
+
+.boxMaisProcurados{ /*frase mais procurados acima dos produtos*/
+  background-color:rgb(20, 179, 36);
+  width: 100%;
+  height: 100px; /*para crescer com o tamanho do conteudo*/
+  padding-top:2%;
+  color:#206683;
+ 
+}
+
+.boxProdutos { /*criando as caixas dos produtos  */
+  background-color:#1111c3;
+  width: 20%;
+  height: 300px; /*para crescer com o tamanho do conteudo*/
+  margin: 0.8%; /*margem ao redor das caixas para ficarem distantes */
+  border-radius: 10px; /*arredondamento*/
+  padding:0.5%;
+  text-align:justify;
+
+}
+
+.tamanhoProdutos{ /*classe para o tamanho dos produtos mais procurados*/
+  width: 100%;
+  height: auto; 
+   
+}
+
+h1{
+  font-size: 20px;
+  font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:40px;
+  text-align: center;
+
+}
+
+h2{
+  font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:20px;
+  text-align: center;
+
+}
+
+.boxBannerFrete{
+  background-color:white;
+  width: 100%;
+  height: auto; /*para crescer com o tamanho do conteudo*/
+  margin: 0%; /*margem ao redor das caixas para ficarem distantes */
+  border-radius: 5px; /*arredondamento*/
+  padding:0%;
+
+}
+
+.tamanhoFrete{ /*classe para o tamanho do banner frete*/
+    width:100%;
+}	
+
+.boxMenuRodape{ /*caixa para o menu do rodape que será chamado 3 vezes para os menus e redes sociais*/
+  background-color:#103a4b;
+  width: 25%;
+  height: 200px; 
+  margin: 0%; /*margem ao redor das caixas para ficarem distantes OU zera pra grudarem */
+  padding:0%;
+  color:white;
+  font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:20px;
+ 
+
+}
+
+.boxRodape{
+  background-color:#031218;
+  width: 100%;
+  height:40px; 
+  font-size:20px;
+  text-align:center;
+  color:white;
+  font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding:1%;
+
+  
+}
+
+/*MENU*/
+
+nav{
+	max-width: 100%; 
+	height: 60px; /*coloque a altura que quiser*/
+	background-color: #103a4b;
+ 	padding-top:5px;
+}
+
+nav ul{ /*formatando o ul para alinhar os botoes que estão dentro dele*/
+	list-style: none; /*retirando a linha abaixo do link*/
+	margin:0px; /*coloque margem se for necessário - espaço por fora*/
+	padding:0px; /*coloque padding se for necessário - espaço por dentro*/
+	text-align:center; /*alinhando os botoes */
+}
+
+nav ul li{
+	display: inline-block;	/*tranformei meu li em blocos para posicionar e alterar margens*/
+        font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin-right:20px; /*distancia entre os botoes*/
+   
+}
+
+nav ul li a{ /*agora vms formatar o link em si*/
+	padding: 15px;
+	text-decoration: none;
+	color: #d1d8aa;
+	display: block;
+	text-align: center;
+	background-color:#103a4b; /*cor do botao inicial*/
+ 	border-radius: 15px; /*borda arredondada*/
+        padding-right: 40px;
+        padding-left: 40px;
+    
+}
+
+nav ul li a:hover { /*quando passar o mouse sobre*/
+	background-color: #ecd37a; /*ficará dessa cor quando passar o mouse*/
+	transition: all .5s; /*tempo de transição do efeito*/
+        border-radius: 15px; /*borda arredondada*/
+	font-family: Arial Narrow Bold, sans-serif;
+	color:#103a4b;
+	
+    
+}
+
+/*fim do menu*/
+
+/*links do rodape*/
+
+li {
+	display: block;
+	
+	
+}
+
+li a {
+	text-decoration:none;
+	color:white;
+	
+}
+
+
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        
+        <div class="boxLogo"  title="logo" alt="imagem marca">        
+           
+        </div>
+
+        <div class="boxMenu">
+           texto
+
+
+
+        </div>
+
+        <div class="boxBanner">
+           
+	    	
+        </div>
+
+        <div class="boxMaisProcurados">
+         
+        </div>
+
+       
+        <div class="boxProdutos">
+
+           
+        </div>
+
+        <div class="boxProdutos">
+         
+        </div>
+
+        <div class="boxProdutos">
+         
+        </div>
+
+        <div class="boxProdutos">
+        
+       </div>
+
+
+         <div class="boxBannerFrete">
+          
+        </div>
+
+        <div class="boxMenuRodape">
+        	
+         </div>
+
+         <div class="boxMenuRodape">
+          
+         </div>
+
+         <div class="boxMenuRodape">
+           <!--criei uma caixa vazia para o siga-nos ficar na ponta--> 
+         </div>
+
+         <div class="boxMenuRodape">
+          
+         </div>
+
+
+
+
+      <div class="boxRodape">
+        Todos os direitos reservdddddadddos - 20232ss
+      </div>
+
+    </div>
+  
+
+
+</body>
+</html>
+
+
+
+
+	
+	

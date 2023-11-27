@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Aqui você coloca uma descrição sobre a página..."/>
+    <meta name="keywords" content="palavra chave par o site de pesquisa te encontrar"/>
+
+   
+<title>  FLEXBOX APRENDENDO  </title>
+
+<style> /*CSS INTERNO SÓ PRA APRENDER. DEPOIS FAREMOS EXTERNO*/
+
+.wrapper { /*CONTAINER PRINCIPAL QUE RECEBERÁ AS CAIXAS INTERNAS*/
+  margin:auto; /*centralizar*/
+  display: flex; /*para transformar em blocos*/
+  flex-direction:row; /*Os blocos ficarão em linhas (um do lado do outro). Temos tambem em coluna -> column */
+  flex-wrap: wrap;  /*qdo utilizamos blocos eles ficam um do lado do outro mesmo q tenha tamanho total da tela, entao para resolver isso utilizamos o flex-wrap:wrap */
+  justify-content:center;/*alinhando os blocos na horizontal dentro do principal*/
+  align-items:center; /*alinhando os blocos na vertical */
+  width: 100%; /*Largura do principal*/
+  height:auto; 
+  background-color: rgb(255, 255, 255);
+  padding: 0px; /*espaço entre as caixas e o principal*/
+}
+
+.boxLogo{
+  background-color:rgb(255, 255, 255);
+  width: 100%;
+  height: 150px; /*para crescer com o tamanho do conteudo*/
+  padding:0%;
+  text-align: center;
+
+}
+
+.tamanhoLogo{ /*criei uma classe para o tamanho da logo*/
+    width:150px;
+    height: 150px;
+}
+
+.boxMenu{
+  background-color:#103a4b;
+  width: 100%;
+  height: 60px; /*para crescer com o tamanho do conteudo*/
+  padding:0%;
+  text-align: center;  
+  color:white;
+}
+
+
+.tamanhoBanner{ /*classe para tamanho do banner*/
+	width: 100%;
+}
+
+.boxMaisProcurados{ /*frase mais procurados acima dos produtos*/
+  background-color:rgb(255, 255, 255);
+  width: 100%;
+  height: 80px; /*para crescer com o tamanho do conteudo*/
+  padding-bottom:1%;
+  color:#206683;
+ 
+}
+
+.boxProdutos { /*criando as caixas dos produtos  */
+  background-color:#DCDCDC;
+  width: 20%;
+  height: auto; /*para crescer com o tamanho do conteudo*/
+  margin: 0.8%; /*margem ao redor das caixas para ficarem distantes */
+  border-radius: 10px; /*arredondamento*/
+  padding:1%;
+  text-align:justify;
+
+}
+
+.tamanhoProdutos{ /*classe para o tamanho dos produtos mais procurados*/
+  width: 100%;
+  height: auto; 
+   
+}
+
+h1{
+  font-size: 20px;
+  font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:40px;
+  text-align: center;
+
+}
+
+h2{
+  font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:20px;
+  text-align: center;
+
+}
+
+p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.boxBannerFrete{
+  background-color:white;
+  width: 100%;
+  height: auto; /*para crescer com o tamanho do conteudo*/
+  margin: 0%; /*margem ao redor das caixas para ficarem distantes */
+  border-radius: 5px; /*arredondamento*/
+  padding:0%;
+
+}
+
+.tamanhoFrete{ /*classe para o tamanho do banner frete*/
+    width:100%;
+}	
+
+.boxMenuRodape{ /*caixa para o menu do rodape que será chamado 3 vezes para os menus e redes sociais*/
+  background-color:#103a4b;
+  width: 25%;
+  height: 100px; 
+  margin: 0%; /*margem ao redor das caixas para ficarem distantes OU zera pra grudarem */
+  padding-bottom:2%;
+  color:white;
+  font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:20px;
+ 
+
+}
+
+.boxRodape{
+  background-color:#1f5c74;
+  width: 100%;
+  height:40px; 
+  font-size:20px;
+  text-align:center;
+  color:white;
+  font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding:1%;
+
+  
+}
+
+/*MENU*/
+
+nav{
+	max-width: 100%; 
+	height: 60px; /*coloque a altura que quiser*/
+	background-color: #103a4b;
+ 	padding-top:5px;
+}
+
+nav ul{ /*formatando o ul para alinhar os botoes que estão dentro dele*/
+	list-style: none; /*retirando a linha abaixo do link*/
+	margin:0px; /*coloque margem se for necessário - espaço por fora*/
+	padding:0px; /*coloque padding se for necessário - espaço por dentro*/
+	text-align:center; /*alinhando os botoes */
+}
+
+nav ul li{
+	display: inline-block;	/*tranformei meu li em blocos para posicionar e alterar margens*/
+  font-family: Century Gothic, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-right:0px; /*distancia entre os botoes*/
+   
+}
+
+nav ul li a{ /*agora vms formatar o link em si*/
+	padding: 15px;
+	text-decoration: none;
+	color: #d1d8aa;
+	display: block;
+	text-align: center;
+	background-color:#103a4b; /*cor do botao inicial*/
+ 	border-radius: 15px; /*borda arredondada*/
+  padding-right: 40px;
+  padding-left: 40px;
+    
+}
+
+nav ul li a:hover { /*quando passar o mouse sobre*/
+	background-color: #ecd37a; /*ficará dessa cor quando passar o mouse*/
+	transition: all .5s; /*tempo de transição do efeito*/
+  border-radius: 15px; /*borda arredondada*/
+	font-family: Arial Narrow Bold, sans-serif;
+	color:#103a4b;
+	
+    
+}
+
+/*fim do menu*/
+
+
+/*links do rodape*/
+
+li {
+	display: block;
+	
+	
+}
+
+li a {
+	text-decoration:none;
+	color:white;
+	
+}
+
+.tamanhoImgs{ /*tamanho da imagem dentro do banner*/
+  width:100%;
+  height: auto;
+}
+
+
+/*INÍCIO BANNER ANIMADO*/
+
+.BANNER { /*caixa onde está seu banner*/
+display:inline-block; /*bloco na mesma linha e podem ser reajustadas*/
+/*a diferença do display:inline-block e do display:inline é que o primeiro pode ser reajustado*/
+width:100%;
+height:600px;
+position:relative; /* é usado quando queremos alterar a posição de um elemento tendo como referência a posição inicial dele*/
+background-color:#B9B9C8;
+margin:2px auto 0px auto; /*todas as medidas num margin só*/
+}
+
+.BANNER img { /*agora vms colocar animação da imagem que está DENTRO do banner*/
+position:absolute; /*posição absoluta dentro do box banner*/
+transition-property:opacity;  /*propriedade de transparência*/
+transition-duration:1s; /*tempo de duração p carregar a img*/
+transition-timing-function:linear; /*transição linear*/
+}
+
+.BANNER #anime1, .BANNER:hover #anime2 {/*ao passar o mouse carregará a segunda img*/
+opacity:1;  /*a primeira começará 100% visível*/
+}  
+
+.BANNER:hover #anime1, .BANNER #anime2 {
+opacity:0;  /*invisível a 1ª para a segunda aparecer*/
+} 
+
+/*FIM BANNER ANIME*/
+
+
+
+
+
+/*BREAKPOINTS - TAMANHO DA TELA EM DIFERENTES DISPOSITIVOS*/
+
+@media screen and (min-width:375px) {
+  .boxProdutos {
+    width: 80%;
+    height: auto;
+    float: left;
+    margin: 1%;
+    font-size: 1.3vw; /*1 VEZ O ELEMENTO que ela está*/
+    padding: 10%;
+  }
+  
+}
+/*FONTES RESPONSIVAS
+VW - baseado na largura da tela
+viewport unit - baseada na largura da tela(width) se tiver 5vw será 5% da largura da tela quanto maior a largura da tela maior será o meu VW
+EM - (1em é uma vez o font-size do elemento) */
+
+
+
+@media screen and (min-width : 576px) {
+  .boxProdutos  {
+    width: 80%;
+    height: auto;
+    float: left;
+    margin: 1%;
+    font-size: 1.8em;
+  }
+}
+@media screen and (min-width : 768px) {
+  .boxProdutos  {
+    width: 30%;
+    float: left;
+    margin-right: 5%;
+    padding: 1%;
+    font-size: 1.1vw;
+  }
+}
+
+@media screen and (min-width : 992px) {
+  .boxProdutos  {
+    width: 20%;
+    float: left;
+    margin-right: 1%;
+    padding: 1%;
+  }
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="boxLogo"  title="logo" alt="imagem marca" >
+            <img src="IMAGENS/LOGO.png" class="tamanhoLogo">
+        </div>
+
+        <div class="boxMenu">
+            <nav>
+                <ul>
+                    <li> <a href="index.html"> HOME </a></li>
+                    <li> <a href="escolar.html"> ESCOLAR </a></li>
+                    <li> <a href="informatica.html"> INFORMÁTICA </a></li>
+                    <li> <a href="contato.html"> FALE CONOSCO </a></li>
+                </ul>
+            </nav>
+        </div>
+
+  
+
+              
+        <div class="boxProdutos">
+
+           <img src="IMAGENS/apontador.png" class="tamanhoProdutos">
+	        <h2>APONTADOR </h2>
+          <p>R$ 15,00</p>
+        </div>
+
+        <div class="boxProdutos">
+          <img src="IMAGENS/estojo.png" class="tamanhoProdutos">
+	        <h2>ESTOJO </h2>
+          <p>R$ 20,00</p>
+        </div>
+
+        <div class="boxProdutos">
+          <img src="IMAGENS/borracha.png" class="tamanhoProdutos">
+	        <h2>BORRACHA </h2>
+          <p>R$10,00   </p>
+        </div>
+
+        <div class="boxProdutos">
+          <img src="IMAGENS/caneta.png" class="tamanhoProdutos">
+	        <h2>CANETA </h2>
+          <p> 30,00</p>
+       </div>
+
+       <div class="boxProdutos">
+        <img src="IMAGENS/sulfite.png" class="tamanhoProdutos">
+          <h2>SULFITE </h2>
+        <p> R$ 30,00 </p>
+     </div>
+
+     <div class="boxProdutos">
+        <img src="IMAGENS/regua.png" class="tamanhoProdutos">
+          <h2>RÉGUA </h2>
+        <p> R$ 15,00
+     </div>
+
+     <div class="boxProdutos">
+        <img src="IMAGENS/mochila.png" class="tamanhoProdutos">
+          <h2>MOCHILA </h2>
+        <p> R$ 70,00 </p>
+     </div>
+
+     <div class="boxProdutos">
+        <img src="IMAGENS/agenda.png" class="tamanhoProdutos">
+          <h2>AGENDA </h2>
+        <p>R$ 45,00</p>
+     </div>
+
+
+       
+        <div class="boxMenuRodape">
+        	<ul>
+                    <li> <a href="index.html"> HOME </a></li>
+                    <li> <a href="escolar.html"> PRODUTOS </a></li>
+                    <li> <a href="informatica.html"> ENTREGA </a></li>
+                    
+                </ul>   
+	
+         </div>
+
+         <div class="boxMenuRodape">
+            <ul>
+                    <li> <a href="index.html"> CONTATO </a></li>
+                    <li> <a href="escolar.html"> QUEM SOMOS </a></li>
+                    <li> <a href="informatica.html"> TRABALHE CONOSCO</a></li>
+                    
+                </ul>  
+         </div>
+
+         <div class="boxMenuRodape">
+           <!--criei uma caixa vazia para o siga-nos ficar na ponta--> 
+         </div>
+
+         <div class="boxMenuRodape">
+            <h1> SIGA-NOS! </h1>
+         </div>
+
+
+
+
+      <div class="boxRodape">
+        Todos os direitos reservados - 2023
+      </div>
+
+    </div>
+  
+
+
+</body>
+</html>
+
+
+
+
+	
+	
