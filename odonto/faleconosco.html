@@ -1,0 +1,153 @@
+<!Doctype html>
+<!-- mostra a versão utilizada do html -->
+<html lang= "pt-br">
+    <!-- idioma que será utilizado-->
+    <head>
+        <!-- parte inteligente da página onde irá as configurações de dispositivos, formatação e conteúdo -->
+         <meta charset="UTF-8"> <!-- para aceitar caracteres especiasis -->
+        <meta http-equiv="X-UA-compatible" content="IE-edge>" <!-- Essa opção permite que os desenvolvedores especifique em qual versão do Internet explorer deve ser usada para exibira página -->
+        <meta name="viewport" content="width=device-width, intial-scale=1.0"> <!-- Configurações para dispositivos móveis -->
+        <meta name="description" content=" aqui voce coloca uma descrição sobre a pagina..."/>
+        <meta name="keywords" content="palavra chave para o site de pesquisa te encontrar"/>
+<!--Chamando meu favicon-->
+
+<link rel="icon" href ="imagens/favicon.ico">
+
+<link type="text/css" rel="stylesheet" href="css/style.css"> 
+    <!-- lincar o css EXTERNO
+    TYPE= TIPO DE ARQUIVO
+    REL= ESTILO EM CASCATA
+    HREF= LINK QUE CHAMARÁ O CSS EXTERNO-->
+
+
+    <title>Clínica odontológica</title>
+
+</head>
+        
+<body>
+
+    <div class="wrapper">
+
+        <div class="boxLogo"  title="logo" alt="imagem marca" >
+            <img src="imagens/logo.png" class="tamanhoLogo">
+        </div>
+
+        <div class="boxMenu">
+            <nav id="principal">
+                <ul>
+                    <li> <a href="index.html"> HOME </a></li>
+                    <li> <a href="sobrenos.html"> SOBRE NÓS </a></li>
+                    <li> <a href="faleconosco.html"> FALE CONOSCO </a></li>
+                </ul>
+            </nav>
+        </div>
+
+        
+        <div class="boxPessoa">
+            <h1>FALE CONOSCO</h1>
+            (11) 91226-8614 <br />
+            Horário de atendimento:  <br />
+            Seg. à Sex. das 8h às 18h  <br />
+            Sáb. das 9h às 14h <br />
+          </div>
+  
+
+        <div class="boxFormulario">
+
+            <form method="post" id="ffaleconosco" action="mailto:empresaX@gmail.com">
+              <!-- método post para guardar as informações
+                  id (IDENTIFICAÇÃO) para chamar no css e formatar
+                  action para qual email irão os dados
+                  temos o method GET para pesquisas. Ele não guarda o conteúdo
+               -->
+                          
+              
+              <!-- teremos uma legenda acima do bloco para identificá-lo -->
+              <p> <!--parágrafo pra ficar separado em outra linha-->
+                  <label for="cNome"> Nome: </label> <!--rótulo que virá antes da caixa de preenchimento-->
+                  <input type="text" name="tNome" id="cNome" size="20" maxlength="20"     autofocus required />
+                  <!--input é a caixa para o usuário preencher - do tipo texto 
+                   a caixa possui um nome que irá receber o conteudo digitado e um id para o css
+                   maxlength é a quantidade de caracteres que o usuário pode digitar dentro da caixa
+                   placeholder - texto informativo dentro da caixa
+                   autofocus - o cursor ficará dentro da caixa e o campo será obrigatório-->
+               </p> 
+               
+              
+                       
+               <p>
+                  <label for="cMail">E-mail:</label>
+                  <input type="email" name="tMail" id="cMail" size="20" maxlength="30"  required />
+               </p>
+               <!-- type email permite que vc digite um email válido-->
+              
+                 
+       <p>
+          <label for="cRua">Endereço:</label>
+          <input type="text" name="tRua" id="cRua" size="30" maxlength="50"  placeholder="Rua, Av, Trav,..." required />
+      
+       
+      </p>
+  
+      
+      <!--abri um novo bloco para mensagem do cliente-->
+     
+       <legend>Mensagem do Usuário</legend>
+       
+         
+        <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem">
+          </textarea>  <!--textarea é uma caixa que vc pode deixar com mais linhas e colunas para o usuário digitar mais texto-->
+      </p>
+      
+      <!-- botoes de enviar e apagar -->
+      <input type="submit" name="Enviar"  /> 
+      <input type="reset" name="Limpar"  />
+      
+      </form> <!-- fecha o formulario-->
+    
+      </div>
+
+
+
+        <div class="boxMenuRodape">
+          
+            <ul>
+                    <li> <a href="index.html"> HOME </a></li>
+                    <li> <a href="sobrenos.html"> SOBRE NÓS </a></li>
+                    <li> <a href="faleconosco.html"> FALE CONOSCO </a></li>
+                    
+                </ul>   
+    
+         </div>
+
+         <div class="boxMenuRodape">
+            <ul>
+                    <li> <a href="https://api.whatsapp.com/send?phone=+5511912268614&text=Ol%C3%A1,%20Gostaria%20de%20fazer%20uma%20avalia%C3%A7%C3%A3o%20gratu%C3%ADta"> WHATSAPP </a></li>
+                    <li> <a href="https://www.google.com.br/maps/@-14.4095261,-51.31668,4z?entry=ttu"> ENDEREÇO </a></li>
+                    <li> <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5ToRyXNF2XKFWORFFsZgBRguMlbdFmw9gzbeIBEwDu_qZzg/viewform?usp=sf_link"> TRABALHE CONOSCO</a></li>
+                    
+                </ul>  
+         </div>
+         
+
+         <div class="boxMenuRodape">
+           <!--criei uma caixa vazia para o siga-nos ficar na ponta--> 
+         </div>
+
+         <div class="boxMenuRodape">
+            <h1> SIGA-NOS! </h1>
+         </div>
+
+
+
+
+      <div class="boxRodape">
+        Todos os direitos reservados - 2023
+      </div>
+
+    </div>
+  
+
+
+</body>
+</html>
